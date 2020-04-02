@@ -1,0 +1,30 @@
+﻿@model EmptyState.ViewComponents.EmptyStateViewModel
+
+<div class="empty-state">
+    <div class="empty-state-block">
+        <p class="empty-state-message">@Model.message</p>
+    </div>
+    <a asp-controller="@Model.controllerName" asp-action="@Model.actionName" class="@Model.buttonClass">
+        <i class="@Model.buttonIcon"></i>&nbsp;@Model.buttonText
+    </a>
+</div>
+
+<style>
+    .empty-state
+    {
+        height:50%;
+        margin: 180px 0px;
+        text-align: center;
+    }
+    
+    .empty-state-block
+    {
+        width:200px;
+        margin:0px auto;
+    }
+    
+    .empty-state-message
+    {
+        color:#898989;
+    }
+</style>
